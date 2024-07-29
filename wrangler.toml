@@ -1,13 +1,13 @@
-name = "ai-to-openai"                # todo
+name = "workers-ai-to-openai"
 main = "index.js"
-compatibility_date = "2024-05-06"
+compatibility_date = "2024-07-29"
 
 [ai]
 binding = "AI"
 
 [[r2_buckets]]
 binding = "IMAGE_BUCKET"
-bucket_name = "ai-to-openai-images"
+bucket_name = "openai-cf-images"
 
 [vars]
 CLOUDFLARE_ACCOUNT_ID = "b0dda00db555f237f277259bed93134b"
