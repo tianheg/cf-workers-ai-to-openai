@@ -1,11 +1,5 @@
 # <h1 align="center">⚡️ OpenAI for Workers AI 🧠</h1>
 
-### <p align="center">Simple, quick, and dirty implementation of OpenAI's API on Cloudflare's new Workers AI platform.</p>
-
-## Why?
-
-I think that in the near future, smaller, cheaper LLMs will be a legitimate competitor to OpenAI's GPT-3.5 and GPT-4 APIs. Most developers will not want to rewrite their entire codebase in order to use these up-and-coming models. I also think that Cloudflare Workers are a neat way to host AI and APIs, so I implemented the OpenAI API on Workers AI. This allows developers to use the OpenAI SDKs with the new LLMs without having to rewrite all of their code. This code, as is Workers AI, is not production ready but will be semi-regularly updated with new features as they roll out to Workers AI.
-
 ## Compatibility
 
 Here are all the APIs I would like to implement or have implemented that are currently possible with the Workers AI platform.
@@ -64,7 +58,6 @@ Next, install the dependencies and deploy to your account. If you are not logged
 
 ```bash
 yarn
-yarn init-prod # only needs run the first time!!!
 yarn deploy
 ```
 
@@ -76,19 +69,6 @@ wrangler secret put CLOUDFLARE_API_TOKEN # put the Cloudflare API token here
 ```
 
 Now you're ready to use the API! You can find the URL in the output of the `yarn deploy` command.
-
-## Development
-
-Before Testing, copy `.dev.vars.example` to `.dev.vars` and populate the variables with the appropriate values. See [Deploying](#deploying) for more information.
-
-As of 07/10/2023 testing locally does not work. However, you can test remotely using the following command:
-
-```bash
-yarn init-dev # only needs run the first time!!!
-yarn dev
-```
-
-This will start a local server that will proxy requests to your deployed API. You can then use the API as you normally would, but with the local server's URL instead of the deployed URL.
 
 ## Usage
 

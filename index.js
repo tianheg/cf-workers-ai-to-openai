@@ -66,3 +66,4 @@ export default {
 			// including errors
 			.then(corsify),
 };
+
